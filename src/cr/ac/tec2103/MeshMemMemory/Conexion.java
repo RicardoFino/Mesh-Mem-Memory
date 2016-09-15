@@ -24,7 +24,6 @@ public class Conexion extends Thread{
                 System.out.println("Cliente :"+ IDcliente +" Conexion estrablecida " + nuevoSocket);
                 System.out.println("Nueva Conexion");
                 IDcliente++;
-                //((Server) new Server (nuevoSocket,IDcliente)).start();//ver que sucede
                 hilo = new Thread(new Server(nuevoSocket, IDcliente),"hilo");
                 hilo.start();
             }
